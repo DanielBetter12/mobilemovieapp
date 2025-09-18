@@ -4,8 +4,11 @@ import {images} from "@/constants/images";
 import ScrollView = Animated.ScrollView;
 import {icons} from "@/constants/icons";
 import SearchBar from "@/components/SearchBar";
+import { useRouter } from "expo-router";
 
 export default function Index() {
+  const router = useRouter();
+
   return (
   <View className="flex-1 bg-blue-950">
     <Image source={images.bg} className="absolute w-ful z-0"/>
@@ -14,7 +17,10 @@ export default function Index() {
         <Image source={icons.logo} className="w-12 h-10 mt-20 mb-5 mx-auto"/>
 
           <View className="flex-1 mt-5">
-              <SearchBar />
+              <SearchBar
+              onPress={() => router.push("/search")}
+              placeholder="Search for a movie"
+              />
           </View>
       </ScrollView>
   </View>
