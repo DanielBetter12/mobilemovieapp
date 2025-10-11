@@ -5,6 +5,8 @@ import ScrollView = Animated.ScrollView;
 import {icons} from "@/constants/icons";
 import SearchBar from "@/components/SearchBar";
 import { useRouter } from "expo-router";
+import useFetch from "@/services/useFetch";
+import {fetchMovies} from "@/services/api";
 
 export default function Index() {
   const router = useRouter();

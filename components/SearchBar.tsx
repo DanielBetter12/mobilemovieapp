@@ -8,6 +8,7 @@ interface Props {
     onPress?: () => void;
 }
 
+// @ts-ignore
 const SearchBar = ({ placeholder, onPress }) => {
     return (
         <View className="flex-row items-center bg-dark-200 rounded-full px-5 py-4">
